@@ -1,0 +1,287 @@
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "A --an ancestor--> B?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "A --a descendant--> B?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "B --an ancestor--> A?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "B --a descendant--> A?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "B --an ancestor--> C?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "B --a descendant--> C?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "C --an ancestor--> B?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "C --a descendant--> B?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "A --an ancestor--> C?"
+answer = "Y"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "A --a descendant--> C?"
+answer = "N"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "C --an ancestor--> A?"
+answer = "N"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "C --a descendant--> A?"
+answer = "Y"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --rev--> B --rev--> C"
+query = "A --an ancestor--> B?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --rev--> C"
+query = "A --a descendant--> B?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --rev--> C"
+query = "B --an ancestor--> A?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --rev--> C"
+query = "B --a descendant--> A?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --rev--> C"
+query = "B --an ancestor--> C?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --rev--> C"
+query = "B --a descendant--> C?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --rev--> C"
+query = "C --an ancestor--> B?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --rev--> C"
+query = "C --a descendant--> B?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --rev--> C"
+query = "A --an ancestor--> C?"
+answer = "N"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --rev--> B --rev--> C"
+query = "A --a descendant--> C?"
+answer = "Y"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --rev--> B --rev--> C"
+query = "C --an ancestor--> A?"
+answer = "Y"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --rev--> B --rev--> C"
+query = "C --a descendant--> A?"
+answer = "N"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "A --an ancestor--> B?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "A --a descendant--> B?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "B --an ancestor--> A?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "B --a descendant--> A?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "B --an ancestor--> C?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "B --a descendant--> C?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "C --an ancestor--> B?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "C --a descendant--> B?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "A --an ancestor--> C?"
+answer = "N"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "A --a descendant--> C?"
+answer = "N"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "C --an ancestor--> A?"
+answer = "N"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "C --a descendant--> A?"
+answer = "N"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "A --an ancestor--> B?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "A --a descendant--> B?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "B --an ancestor--> A?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "B --a descendant--> A?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "B --an ancestor--> C?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "B --a descendant--> C?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "C --an ancestor--> B?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "C --a descendant--> B?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "A --an ancestor--> C?"
+answer = "N"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "A --a descendant--> C?"
+answer = "N"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "C --an ancestor--> A?"
+answer = "N"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "C --a descendant--> A?"
+answer = "N"
+kind = "two-hop"

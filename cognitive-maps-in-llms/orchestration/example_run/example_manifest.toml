@@ -1,0 +1,137 @@
+# Example manifest for the complete paper run.
+# Edit the output roots before generating task configurations.
+# Generates 2,662 task configurations; applying
+# --apply-full-run-skip-policy leaves 1,958 active tasks.
+
+run_id = "example_run"
+
+model_presets = [
+    "gemma-4b",
+    "gemma-12b",
+    "gemma-27b",
+    "llama-8b",
+    "llama-70b",
+    "qwen-0p6b",
+    "qwen-1p7b",
+    "qwen-4b",
+    "qwen-8b",
+    "qwen-14b",
+    "qwen-32b",
+]
+
+prompt_presets = [
+    "ABC_family_tree_who_is",
+    "ABC_family_tree_yes_no",
+    "ABC_alien_family_tree_who_is",
+    "ABC_alien_family_tree_yes_no",
+    "ABC_gene_regulatory_network",
+    "ABC_neural_circuit",
+    "ABC_older_younger",
+    "ABC_taller_shorter",
+    "ABC_faster_slower",
+    "ABC_alien_older_younger",
+    "ABC_alien_taller_shorter",
+    "ABC_alien_faster_slower",
+    "ABC_company_structure",
+    "ABC_alien_company_structure",
+    "ABC_proposition_equivalence",
+    "ABC_variable_equivalence",
+    "ABC_east_west",
+    "ABC_north_south",
+    "ABC_ahead_behind",
+    "ABC_family_trees_descendant_ancestor",
+    "ABC_older_younger_unique_locations_who_is",
+    "ABC_older_younger_unique_locations_yes_no",
+]
+
+results = "/path/to/results"
+artifacts = "/path/to/artifacts"
+
+[[tasks]]
+name = "activation_and_kv_recording"
+kind = "recording"
+settings = { n_trials = 100, start_seed = 10000 }
+
+[[tasks]]
+name = "iterative_erasure"
+kind = "erasure"
+settings = { n_trials = 10, start_seed = 20000, dividing_layer_fraction = 0.5 }
+[tasks.dependencies]
+recordings = "activation_and_kv_recording"
+
+[tasks.settings_by_model]
+qwen-0p6b = { dividing_layer_fraction = 0.6666666666666666 }
+qwen-1p7b = { dividing_layer_fraction = 0.6666666666666666 }
+qwen-4b = { dividing_layer_fraction = 0.6666666666666666 }
+qwen-8b = { dividing_layer_fraction = 0.6666666666666666 }
+qwen-14b = { dividing_layer_fraction = 0.6666666666666666 }
+qwen-32b = { dividing_layer_fraction = 0.6666666666666666 }
+
+[[tasks]]
+name = "exp_1_behavior"
+kind = "mosaic_experiment"
+experiment = "exp_1_behavior"
+settings = { n_trials = 50 }
+
+[[tasks]]
+name = "exp_2_separability"
+kind = "mosaic_experiment"
+experiment = "exp_2_separability"
+settings = { n_trials = 50 }
+
+[[tasks]]
+name = "exp_3_additivity"
+kind = "mosaic_experiment"
+experiment = "exp_3_additivity"
+settings = { n_trials = 50 }
+
+[[tasks]]
+name = "exp_4_retrospective_prospective"
+kind = "mosaic_experiment"
+experiment = "exp_4_retrospective_prospective"
+settings = { n_trials = 50 }
+
+[[tasks]]
+name = "exp_5a_bottleneck"
+kind = "mosaic_experiment"
+experiment = "exp_5a_bottleneck"
+settings = { n_trials = 50, dividing_layer_fraction = 0.5 }
+[tasks.dependencies]
+recordings = "activation_and_kv_recording"
+
+[tasks.settings_by_model]
+qwen-0p6b = { dividing_layer_fraction = 0.6666666666666666 }
+qwen-1p7b = { dividing_layer_fraction = 0.6666666666666666 }
+qwen-4b = { dividing_layer_fraction = 0.6666666666666666 }
+qwen-8b = { dividing_layer_fraction = 0.6666666666666666 }
+qwen-14b = { dividing_layer_fraction = 0.6666666666666666 }
+qwen-32b = { dividing_layer_fraction = 0.6666666666666666 }
+
+[[tasks]]
+name = "exp_5b_sparse_mosaic"
+kind = "mosaic_experiment"
+experiment = "exp_5b_sparse_mosaic"
+settings = { n_trials = 50 }
+[tasks.dependencies]
+recordings = "activation_and_kv_recording"
+erasure_trajectory = "iterative_erasure"
+
+[[tasks]]
+name = "exp_5c_editing"
+kind = "mosaic_experiment"
+experiment = "exp_5c_editing"
+settings = { n_trials = 50 }
+[tasks.dependencies]
+erasure_trajectory = "iterative_erasure"
+
+[[tasks]]
+name = "exp_s1_positions_rope"
+kind = "mosaic_experiment"
+experiment = "exp_s1_positions_rope"
+settings = { n_trials = 50 }
+
+[[tasks]]
+name = "exp_s2_positions_indirect_swap"
+kind = "mosaic_experiment"
+experiment = "exp_s2_positions_indirect_swap"
+settings = { n_trials = 50 }

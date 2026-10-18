@@ -1,0 +1,215 @@
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "A --equivalent to--> B?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "A --compatible with--> B?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "B --equivalent to--> A?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "B --compatible with--> A?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "B --equivalent to--> C?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "B --compatible with--> C?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "C --equivalent to--> B?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "C --compatible with--> B?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "A --equivalent to--> C?"
+answer = "Y"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "A --compatible with--> C?"
+answer = "Y"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "C --equivalent to--> A?"
+answer = "Y"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "C --compatible with--> A?"
+answer = "Y"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "A --equivalent to--> B?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "A --compatible with--> B?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "B --equivalent to--> A?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "B --compatible with--> A?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "B --equivalent to--> C?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "B --compatible with--> C?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "C --equivalent to--> B?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "C --compatible with--> B?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "A --equivalent to--> C?"
+answer = "N"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "A --compatible with--> C?"
+answer = "N"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "C --equivalent to--> A?"
+answer = "N"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "C --compatible with--> A?"
+answer = "N"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "A --equivalent to--> B?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "A --compatible with--> B?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "B --equivalent to--> A?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "B --compatible with--> A?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "B --equivalent to--> C?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "B --compatible with--> C?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "C --equivalent to--> B?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "C --compatible with--> B?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "A --equivalent to--> C?"
+answer = "N"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "A --compatible with--> C?"
+answer = "N"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "C --equivalent to--> A?"
+answer = "N"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "C --compatible with--> A?"
+answer = "N"
+kind = "two-hop"

@@ -1,0 +1,167 @@
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "A --one year older than--> ?"
+answer = "B"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "A --two years older than--> ?"
+answer = "C"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "B --one year older than--> ?"
+answer = "C"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "B --one year younger than--> ?"
+answer = "A"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "B --older than--> ?"
+answer = "C"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "B --younger than--> ?"
+answer = "A"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "C --one year younger than--> ?"
+answer = "B"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "C --two years younger than--> ?"
+answer = "A"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --rev--> B --rev--> C"
+query = "A --one year younger than--> ?"
+answer = "B"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --rev--> C"
+query = "A --two years younger than--> ?"
+answer = "C"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --rev--> B --rev--> C"
+query = "B --one year older than--> ?"
+answer = "A"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --rev--> C"
+query = "B --one year younger than--> ?"
+answer = "C"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --rev--> C"
+query = "B --older than--> ?"
+answer = "A"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --rev--> C"
+query = "B --younger than--> ?"
+answer = "C"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --rev--> C"
+query = "C --one year older than--> ?"
+answer = "B"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --rev--> C"
+query = "C --two years older than--> ?"
+answer = "A"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "A --equal in age to--> ?"
+answer = "C"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "A --one year older than--> ?"
+answer = "B"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "A --older than--> ?"
+answer = "B"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "C --equal in age to--> ?"
+answer = "A"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "C --one year older than--> ?"
+answer = "B"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "C --older than--> ?"
+answer = "B"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "A --equal in age to--> ?"
+answer = "C"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "A --one year younger than--> ?"
+answer = "B"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "A --younger than--> ?"
+answer = "B"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "C --equal in age to--> ?"
+answer = "A"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "C --one year younger than--> ?"
+answer = "B"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "C --younger than--> ?"
+answer = "B"
+kind = "one-hop"

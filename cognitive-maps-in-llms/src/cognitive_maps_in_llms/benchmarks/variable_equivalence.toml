@@ -1,0 +1,107 @@
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "A --equal--> B?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "B --equal--> A?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "B --equal--> C?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "C --equal--> B?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "A --equal--> C?"
+answer = "Y"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --fwd--> B --fwd--> C"
+query = "C --equal--> A?"
+answer = "Y"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "A --equal--> B?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "B --equal--> A?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "B --equal--> C?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "C --equal--> B?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "A --equal--> C?"
+answer = "N"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --fwd--> B --rev--> C"
+query = "C --equal--> A?"
+answer = "N"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "A --equal--> B?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "B --equal--> A?"
+answer = "N"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "B --equal--> C?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "C --equal--> B?"
+answer = "Y"
+kind = "one-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "A --equal--> C?"
+answer = "N"
+kind = "two-hop"
+
+[[cases]]
+structure = "A --rev--> B --fwd--> C"
+query = "C --equal--> A?"
+answer = "N"
+kind = "two-hop"

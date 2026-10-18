@@ -1,0 +1,44 @@
+# Export nothing unless explicitly included below. These rules affect git archive,
+# not tracking or pushes. Commit this file before exporting a release snapshot.
+* export-ignore
+
+/.gitattributes -export-ignore
+/README.md -export-ignore
+/pyproject.toml -export-ignore
+
+# Package source, experiment descriptions, and benchmark definitions.
+/src -export-ignore
+/src/cognitive_maps_in_llms -export-ignore
+/src/cognitive_maps_in_llms/** -export-ignore
+/docs -export-ignore
+/docs/** -export-ignore
+/tests -export-ignore
+/tests/test_*.py -export-ignore
+
+# All figure notebooks, including the main-text analogs preview.
+# Generated figures and results are excluded; data ship as a release attachment.
+/figures -export-ignore
+/figures/notebooks -export-ignore
+/figures/notebooks/** -export-ignore
+/figures/scripts -export-ignore
+/figures/scripts/** -export-ignore
+
+# Maintained tools; historical results-migration utilities remain excluded.
+/tools -export-ignore
+/tools/export_pca_inputs.py -export-ignore
+/tools/generate_task_configs.py -export-ignore
+/tools/plan_slurm_jobs.py -export-ignore
+/tools/populate_scheduling.py -export-ignore
+/tools/run_configs.py -export-ignore
+
+# Include the consolidated manifest, but not historical runs or generated configs.
+/orchestration -export-ignore
+/orchestration/example_run -export-ignore
+/orchestration/example_run/example_manifest.toml -export-ignore
+
+# Exclude generated housekeeping files even within included directories.
+**/__pycache__ export-ignore
+*.pyc export-ignore
+**/.pytest_cache export-ignore
+**/.ipynb_checkpoints export-ignore
+*.egg-info export-ignore

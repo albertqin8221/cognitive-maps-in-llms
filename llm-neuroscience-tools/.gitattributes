@@ -1,0 +1,40 @@
+# Export nothing unless explicitly included below. These rules affect git archive,
+# not tracking or pushes. Commit this file before exporting a release snapshot.
+* export-ignore
+
+/.gitattributes -export-ignore
+/README.md -export-ignore
+/pyproject.toml -export-ignore
+
+# Package source, including the bundled name pools.
+/src -export-ignore
+/src/llm_neuroscience_tools -export-ignore
+/src/llm_neuroscience_tools/** -export-ignore
+# Local model downloads and cluster symlinks are not release source files.
+/src/llm_neuroscience_tools/data/models export-ignore
+/src/llm_neuroscience_tools/data/models/** export-ignore
+/docs -export-ignore
+/docs/** -export-ignore
+
+# Automated tests and their shared fixtures.
+/tests -export-ignore
+/tests/test_*.py -export-ignore
+/tests/conftest.py -export-ignore
+/tests/model_preset_test_helpers.py -export-ignore
+
+# Maintained utilities; benchmark logs remain excluded.
+/tools -export-ignore
+/tools/benchmark_forward_passes.py -export-ignore
+/tools/chatbot.py -export-ignore
+/tools/download_model.py -export-ignore
+/tools/list_presets.py -export-ignore
+/tools/tokenization_playground.py -export-ignore
+/tools/build_name_pools -export-ignore
+/tools/build_name_pools/** -export-ignore
+
+# Exclude generated housekeeping files even within included directories.
+**/__pycache__ export-ignore
+*.pyc export-ignore
+**/.pytest_cache export-ignore
+**/.ipynb_checkpoints export-ignore
+*.egg-info export-ignore

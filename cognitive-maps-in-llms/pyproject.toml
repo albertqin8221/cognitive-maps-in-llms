@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cognitive-maps-in-llms"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+  "huggingface_hub",
+  "numpy",
+  "scikit-learn",
+  "torch",
+  "tqdm",
+  "pandas",
+  "matplotlib",
+  "jupyterlab",
+  "nbconvert",
+  "ipykernel",
+  "einops",
+  "transformers",
+  "toml>=0.10.2",
+  "tomli>=2; python_version < '3.11'",
+  "llm-neuroscience-tools"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cognitive_maps_in_llms = [
+  "benchmarks/*.toml",
+]
+
+[tool.pytest.ini_options]
+markers = ["codex: tests written by Codex or another AI coding agent"]

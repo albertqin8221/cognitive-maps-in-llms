@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-neuroscience-tools"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+  "huggingface_hub",
+  "numpy",
+  "torch",
+  "tqdm",
+  "pandas",
+  "einops",
+  "transformers",
+  "accelerate",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+llm_neuroscience_tools = ["data/name_pools/*/*.txt"]
+
+[tool.pytest.ini_options]
+markers = [
+    "gpu_required: tests that require CUDA",
+    "codex: tests written by Codex or another AI coding agent",
+]
